@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Login"
+             x:Class="Login.MainPage" BackgroundColor="Aqua" Title="login">
+    <ContentPage.BindingContext>
+        <local:LoginInfo/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <StackLayout x:Name="MainStak">
+            <StackLayout Padding="20" Margin="0,80,0,0">
+                <Label Text="User Name" TextColor= "Black"></Label>
+                <Entry Text="{Binding name}" Placeholder="user name" x:Name="UserName"></Entry>
+                <Label Text="Password" TextColor="Black"></Label>
+                <Entry Text="{Binding password}" Placeholder="Password" IsPassword="True"></Entry>
+                <Button Text="Login" BackgroundColor="#554994" TextColor="Black" ></Button>
+                <Button Text="Click me" Clicked="Button_Clicked" />
+                <Label x:Name="message" FontSize="Large" TextColor="DarkBlue" FontAttributes="Bold"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
