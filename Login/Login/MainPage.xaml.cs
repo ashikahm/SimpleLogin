@@ -15,11 +15,6 @@ namespace Login
             InitializeComponent();
         }
 
-        private void Button_Clicked(object sender, EventArgs e)
-        {
-            var info = (LoginInfo)BindingContext;
-            message.Text = "Hai New User! "+"Your name is "+info.name;
-
-        }
+       
     }
 }

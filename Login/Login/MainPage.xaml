@@ -14,9 +14,8 @@
                 <Entry Text="{Binding name}" Placeholder="user name" x:Name="UserName"></Entry>
                 <Label Text="Password" TextColor="Black"></Label>
                 <Entry Text="{Binding password}" Placeholder="Password" IsPassword="True"></Entry>
-                <Button Text="Login" BackgroundColor="#554994" TextColor="Black" ></Button>
-                <Button Text="Click me" Clicked="Button_Clicked" />
-                <Label x:Name="message" FontSize="Large" TextColor="DarkBlue" FontAttributes="Bold"/>
+                <Button Text="Login" Command="{Binding LoginCommand}" BackgroundColor="#554994" TextColor="Black" ></Button>
+                <Label x:Name="message" Text="{Binding message}" FontSize="Large" TextColor="DarkBlue" FontAttributes="Bold"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>
